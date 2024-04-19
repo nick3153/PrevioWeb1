@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario WebDeveloper</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container"> 
+        <p id="form-title"><b>Web</b>Developer</p>       
+        <h2>Formulario de afiliación</h2>
+        <form action="#" method="POST" id="formulario-afiliacion">
+            <div>
+                <input type="text" id="nombre_usuario" name="nombre_usuario" placeholder="Nombre completo" required>
+            </div><br>
+            <div>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </div><br>
+            <div>
+                <input type="tel" id="telefono" name="telefono" maxlength="10" placeholder="Numero contacto" required>
+            </div><br>
+            <div class="input-container">
+                <input type="text" id="gusto" name="gusto" placeholder="Gustos">
+                <button type="button" id="agregar-gusto">Gusto</button>
+            </div><br>
+        </form>
+        <div class="container">
+            <table id="tabla-gustos">
+              <thead>
+                <tr>
+                  <th>gusto</th>
+                  <th>%</th>
+                  <th>edit</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <div id="confirmacion" style="display: none;">
+              <p>Pulse Aceptar para guardar los cambios o cancelar para anularlos</p>
+              <button id="aceptar">Aceptar</button>
+              <button id="cancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="Funciones JS.js"></script>
+</body>
+</html>

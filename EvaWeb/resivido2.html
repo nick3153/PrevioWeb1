@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Recepción de Datos</title>
+    <style>
+        /* Estilos CSS aquí */
+        .container {
+            max-width: 400px;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Información Recibida</h2>
+        <table id="infoTable">
+            <tbody>
+                <tr>
+                    <td><strong>Nombre:</strong></td>
+                    <td id="nombre"></td>                    
+                </tr>
+                <tr>
+                    <td><strong>Email:</strong></td>
+                    <td id="email"></td>
+                </tr>
+                <tr>
+                    <td><strong>Teléfono:</strong></td>
+                    <td id="telefono"></td>
+                </tr>
+                <tr>                    
+                    <td><strong>Gusto:</strong></td>
+                    <td id="gusto"></td>
+                </tr>
+                <tr>
+                    <td><strong>Porcentaje:</strong></td>
+                    <td id="porcentaje"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener la URL actual
+            var url = window.location.href;
+            
+            // Obtener los parámetros de la URL
+            var urlParams = new URLSearchParams(url);
+
+            // Obtener los valores de los parámetros
+            var nombre = urlParams.get('nombre') || '';
+            var email = urlParams.get('email') || '';
+            var telefono = urlParams.get('telefono') || '';
+            var gusto = urlParams.get('gusto') || '';
+            var porcentaje = urlParams.get('porcentaje') || '';
+
+            // Mostrar los valores en los elementos HTML
+            document.getElementById('nombre').textContent = nombre;
+            document.getElementById('email').textContent = email;
+            document.getElementById('telefono').textContent = telefono;
+            document.getElementById('gusto').textContent = gusto;
+            document.getElementById('porcentaje').textContent = porcentaje;
+        });
+    </script>
+</body>
+</html>
+
